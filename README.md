@@ -14,7 +14,7 @@ features_data.csv - contains user level data such as:
 * time_horizon - self-reported investment time horizon of the user
 * platform - which platform (iOS or Android) the user is on
 * time_spent - amount of time spent on the app
-* first_deposity_amount - $ value of the amount first deposited
+* first_deposit_amount - $ value of the amount first deposited
 * instrument_type_first_traded - type of instrument first traded
 
 
@@ -28,6 +28,14 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 * Q4. What are the top 3 features? List the most important features that correlate to user churn
 
 ### Getting Started:
+Add the .env file to the root:
+```
+host="localhost"
+database="robinhood"
+user="postgres"
+password="password"
+port="5432"
+```
 Check out this project repo, then run this command:
 ```
 pc: python -m venv venv
@@ -62,6 +70,26 @@ featuretools - automated feature engineering library
 ```
 After the installs complete, run any notebook
 
-### SQLite Database Setup:
-* [SQLite](https://www.sqlite.org/download.html) - links to SQLite database
+### PostgreSQL Database Setup:
+Install PostgreSQL and DBeaver
+* [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) - links to PostgreSQL database download
 * [DBeaver](https://dbeaver.io/) - links to SQL IDE
+Create a PostgreSQL database in DBeaver
+```
+host="localhost"
+database="robinhood"
+schema:"ds"
+user="postgres"
+password="password"
+port="5432"
+```
+Upload .csv files in DBeaver
+```
+database="robinhood"
+schema:"ds"
+tableName:"equity_value_data.csv"
+
+database="robinhood"
+schema:"ds"
+tableName:"features_data.csv"
+```
