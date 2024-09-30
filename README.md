@@ -30,11 +30,13 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 ### Getting Started:
 Check out this project repo, then run this command:
 ```
-python -m venv venv
+pc: python -m venv venv
+macOS: python3 -m venv venv
 ```
 In the IDE terminal run command:
 ```
-venv\scripts\activate
+pc: venv\scripts\activate
+macOS: source venv/bin/activate
 ```
 While the virutal environment is running, run the following command:
 ```
