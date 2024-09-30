@@ -62,6 +62,6 @@ featuretools - automated feature engineering library
 ```
 After the installs complete, run any notebook
 
-### SQLite database setup:
+### SQLite Database Setup:
 * [sqlLite](https://www.sqlite.org/download.html) - links to SQLite database
 * [DBeaver](https://dbeaver.io/) - links to SQL IDE
