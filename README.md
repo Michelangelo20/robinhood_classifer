@@ -70,7 +70,7 @@ featuretools - automated feature engineering library
 ```
 After the installs complete, run any notebook
 
-### PostgreSQL Database Setup:
+### Local PostgreSQL Database Setup:
 Configure and Install PostgreSQL and DBeaver
 * [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) - links to PostgreSQL database download
 * [DBeaver](https://dbeaver.io/) - links to SQL IDE
