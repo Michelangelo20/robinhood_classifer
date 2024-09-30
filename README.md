@@ -26,3 +26,18 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 * Q2. Build a classifier that given a user with their features assigns a churn probability for each user and predicts which users will churn. Based on the classifier output classify each user in the dataset as churned or not churned. What's the AUC score of your test set?
 * Q3. What's the distribution of the given feature that has the highest correlation with churn (Right/left skewed, normal, multinomial distributions)
 * Q4. What are the top 3 features? List the most important features that correlate to user churn
+
+### Getting Started:
+Check out this project repo, then run this command:
+```
+python -m venv venv
+```
+In the IDE terminal run command:
+```
+venv\scripts\activate
+```
+While the virutal environment is running, run the following command:
+```
+pip install -r requirements.txt
+```
+After the installs complete, run any notebook with:
