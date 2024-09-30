@@ -40,7 +40,7 @@ While the virutal environment is running, run the following command:
 ```
 pip install -r requirements.txt
 ```
-* Packages include:
+ Packages include:
 ```
 polars - parallel distribution dataframe library
 pandas - single distribution dataframe library
