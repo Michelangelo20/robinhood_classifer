@@ -7,7 +7,7 @@ In order to improve user retention and lower churn, the growth team at Robinhood
 
 ### Data:
 
-- features_data.csv - contains user level data such as:
+features_data.csv - contains user level data such as:
 - user_id - unique id for every user
 - risk_tolerance - self-reported risk tolerance of the user
 - investment_experience - self-reported liquidity needs of the user
