@@ -71,10 +71,10 @@ featuretools - automated feature engineering library
 After the installs complete, run any notebook
 
 ### PostgreSQL Database Setup:
-Install PostgreSQL and DBeaver
+Configure and Install PostgreSQL and DBeaver
 * [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) - links to PostgreSQL database download
 * [DBeaver](https://dbeaver.io/) - links to SQL IDE
-Create a PostgreSQL database in DBeaver
+Create and Populate PostgreSQL database in DBeaver
 ```
 host="localhost"
 database="robinhood"
@@ -83,7 +83,7 @@ user="postgres"
 password="password"
 port="5432"
 ```
-Upload .csv files in DBeaver
+Upload .csv files in data directory to DBeaver
 ```
 database="robinhood"
 schema:"ds"
