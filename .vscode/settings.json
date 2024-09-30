@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:robinhood_classifer}/local_db.sqlite",
+            "name": "robinhood_classifier"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
