@@ -1,4 +1,4 @@
-# robinhood-classifer
+# Robinhood-OA-Classifer
 This code repository is for the Robinhood Data Science OA
 
 ### Problem:
@@ -40,4 +40,22 @@ While the virutal environment is running, run the following command:
 ```
 pip install -r requirements.txt
 ```
-After the installs complete, run any notebook with:
+- Packages include:
+```
+polars - parallel distribution dataframe library
+pandas - single distribution dataframe library
+numpy - matrix library
+pytorch - neural network library
+scikit-learn - standard ml library
+matplotlib - visualization library
+seaborn - visualization library
+imbalanced-learn - handling imabalnce dataset library
+xgboost - gradient boosting library
+lightgbm - gradient boosting library
+mlflow - manage ml lifecycle platform
+pyspark - distributed computing framework
+shap - model interpretability library
+optuna - hyperparameter optimization library
+featuretools - automated feature engineering library
+```
+After the installs complete, run any notebook
