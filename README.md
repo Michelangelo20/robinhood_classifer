@@ -3,7 +3,8 @@ This code repository is for the Robinhood Data Science OA
 
 ### Problem:
 
-In order to improve user retention and lower churn, the growth team at Robinhood is interested in understanding why and which users withdraw money from their Robinhood account. A user is considered churn when their equity value (amount of money in Robinhood account) falls below $10 for a period of 28 consecutive calendar days or longer.
+In order to improve user retention and lower churn, the growth team at Robinhood is interested in understanding why and which users withdraw money from their Robinhood account.
+A user is considered churn when their equity value (amount of money in Robinhood account) falls below $10 for a period of 28 consecutive calendar days or longer.
 
 ### Data:
 
