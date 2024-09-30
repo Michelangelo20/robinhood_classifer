@@ -1,3 +1,50 @@
+-- Problem Clarification:
+
+-- Available Data: We have data for days when the user's equity value is ≥ $10.
+-- Missing Data Implication: For days not present in equity_value_data.csv, the user's equity value was below $10.
+-- Objective: Identify users who have a period of 28 or more consecutive calendar days where their equity value was below $10, which corresponds to periods when they have no records in equity_value_data.csv.
+
+
+-- Revised Approach:
+
+-- We need to:
+
+-- Generate a Continuous Date Range: Create a complete sequence of dates covering the entire period of interest (from the earliest to the latest date in the dataset).
+
+-- Associate Users with All Dates: For each user, associate them with every date in the date range.
+
+-- Mark Dates with Equity ≥ $10: Identify dates when users have records in equity_value_data.csv (equity ≥ $10).
+
+-- Identify Gaps (Equity < $10): For dates where users have no records (missing dates), infer that their equity was below $10.
+
+-- Detect Consecutive Periods of Equity < $10: Use window functions to find sequences of 28 or more consecutive days where the user had equity < $10 (i.e., missing records).
+
+-- Extract Users Who Have Churned: Select users who have at least one such sequence.
+
+-- Explanation:
+
+-- all_dates CTE:
+-- Generates a complete date range from the earliest to the latest date in the equity_value_data.
+-- users CTE:
+-- Retrieves all distinct user IDs from the dataset.
+-- user_dates CTE:
+-- Associates each user with every date in the date range.
+-- left_joined CTE:
+-- Left joins user_dates with equity_value_data to identify dates when users had equity ≥ $10.
+-- The below_10 flag is set to 1 for dates where the user has no record (implying equity < $10).
+-- consecutive_periods CTE:
+-- Calculates row numbers to help identify consecutive sequences.
+-- The difference (rn1 - rn2) is constant for consecutive dates with the same below_10 value.
+-- grouped_sequences CTE:
+-- Groups the data by user and sequence identifier to calculate the length of each sequence where below_10 = 1.
+-- Final SELECT:
+-- Retrieves user IDs of users who have at least one sequence where below_10 = 1 for 28 or more consecutive days.
+
+-- Note:
+
+-- This query assumes that any date not present in equity_value_data.csv for a user indicates that their equity was below $10 on that date.
+-- The use of (rn1 - rn2) as a group identifier allows us to segment the data into consecutive sequences where below_10 is constant.
+
 WITH all_dates AS (
     -- Step 1: Generate a continuous sequence of dates
     SELECT generate_series(
