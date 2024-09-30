@@ -61,3 +61,7 @@ optuna - hyperparameter optimization library
 featuretools - automated feature engineering library
 ```
 After the installs complete, run any notebook
+
+### DB Creation:
+* [sqlLite](https://www.sqlite.org/download.html) links to SQLite
+* [DBeaver](https://dbeaver.io/) SQL IDE
