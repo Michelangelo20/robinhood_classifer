@@ -38,13 +38,13 @@ port="5432"
 ```
 Check out this project repo, then run this command:
 ```
-pc: python -m venv venv
-macOS: python3 -m venv venv
+pc: python -m venv .venv
+macOS: python3 -m venv .venv
 ```
 In the IDE terminal run command:
 ```
-pc: venv\scripts\activate
-macOS: source venv/bin/activate
+pc: .venv\Scripts\activate
+macOS: source .venv/bin/activate
 ```
 While the virutal environment is running, run the following command:
 ```
