@@ -28,7 +28,7 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 * Q4. What are the top 3 features? List the most important features that correlate to user churn
 
 ### Getting Started:
-Add the .env file to the root:
+Add an .env file to the root if not there already:
 ```
 host="localhost"
 database="robinhood"
