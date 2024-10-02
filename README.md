@@ -28,7 +28,7 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 * Q4. What are the top 3 features? List the most important features that correlate to user churn
 
 ### Getting Started:
-Add an .env file to the root if not there already:
+Check out this project repo, then add an .env credentials, case-sensitive, to the root if not there already:
 ```
 HOST="robinhood.cjomywuwikjl.us-east-2.rds.amazonaws.com"
 DATABASE="postgres"
@@ -36,12 +36,12 @@ USER="postgres"
 PASSWORD="password"
 PORT="5432"
 ```
-Check out this project repo, then run this command:
+In VScode terminal, run this command:
 ```
 pc: python -m venv .venv
 macOS: python3 -m venv .venv
 ```
-In the IDE terminal run command:
+In VScode terminal, run this command:
 ```
 pc: .venv\Scripts\activate
 macOS: source .venv/bin/activate
@@ -67,6 +67,7 @@ pyspark - distributed computing framework
 shap - model interpretability library
 optuna - hyperparameter optimization library
 featuretools - automated feature engineering library
+sqlalchemy - ORM to connect aws postgresql db library
 ```
 After the installs complete, run any notebook
 
