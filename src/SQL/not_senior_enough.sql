@@ -1,37 +1,40 @@
-with temp1 as (
-select
-*,
-row_number() over(partition by user_id order by timestamp) as rn,
-timestamp::date - row_number() over(partition by user_id order by timestamp)::int as streak_id
-from
-equity_value_data
+WITH temp1 AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY timestamp) AS rn,
+        timestamp::date - ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY timestamp)::int AS streak_id
+    FROM
+        equity_value_data
 ),
-temp2 as (
-select
-user_id,
-min(timestamp::date) as min_date,
-max(timestamp::date) as max_date,
-count(*) as duration_of_above10_streak
-from temp1
-group by
-user_id,
-streak_id
+temp2 AS (
+    SELECT
+        user_id,
+        MIN(timestamp::date) AS min_date,
+        MAX(timestamp::date) AS max_date,
+        COUNT(*) AS duration_of_above10_streak
+    FROM
+        temp1
+    GROUP BY
+        user_id, streak_id
 ),
-temp3 as (
-select
-*,
-lag(max_date) over (partition by user_id order by min_date asc) as last_streak_date,
-min_date - lag(max_date) over (partition by user_id order by min_date asc) as duration_between_above10_streaks
-from
-temp2
+temp3 AS (
+    SELECT
+        *,
+        LAG(max_date) OVER (PARTITION BY user_id ORDER BY min_date ASC) AS last_streak_date,
+        min_date - LAG(max_date) OVER (PARTITION BY user_id ORDER BY min_date ASC) AS duration_between_above10_streaks
+    FROM
+        temp2
 ),
-temp4 as (
-select
-*
-from
-temp3
-where duration_between_above10_streaks >= 28
+temp4 AS (
+    SELECT *
+    FROM temp3
+    WHERE duration_between_above10_streaks >= 28
 )
-select
-concat(round((count(distinct user_id)*1.0/(select count (distinct user_id) from equity_value_data))*100,3),'%')
-from temp4
+SELECT
+    CONCAT(
+        ROUND(
+            (COUNT(DISTINCT user_id) * 1.0 / (SELECT COUNT(DISTINCT user_id) FROM equity_value_data)) * 100, 3
+        ), '%'
+    ) AS churn_rate
+FROM
+    temp4;
