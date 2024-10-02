@@ -47,31 +47,3 @@ def fetch_sql_code(sql_query: str):
         return output_df
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-
-# def fetch_sql_file(filename: str):
-#     try:
-#         # Ensure you're using psycopg2 as the driver
-#         engine = create_engine(f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}')
-
-#         # Load the SQL file content
-#         with open(BASE_DIR + filename + '.sql', 'r') as file:
-#             sql_query = file.read()
-
-#         # Establish connection and execute query
-#         with engine.connect() as connection:
-#             # Read into a dataframe using the connection
-#             output_df = pd.read_sql(sql_query, connection)
-#         return output_df
-
-#     except Exception as e:
-#         print(f"An unexpected error occurred: {e}")
-#
-#
-# def fetch_sql_code(sql_query:str):
-#     try:
-#         engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{database}')
-#         output_df = pd.read_sql(sql_query, engine)
-#         return output_df
-#     except Exception as e:
-#         print(f"An unexpected error occurred: {e}")
-
