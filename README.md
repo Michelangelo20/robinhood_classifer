@@ -74,7 +74,7 @@ featuretools - automated feature engineering library
 After the installs complete, run any notebook
 
 ### AWS RDS PostgreSQL Access Setup:
-Navigate to "EC2" in the AWS:
+Navigate to "EC2" in the [AWS](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2):
 ```
 aws account: eric.cheng003c@gmail.com
 aws pw: LetsGoYankees**!
