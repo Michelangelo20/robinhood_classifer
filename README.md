@@ -74,7 +74,7 @@ After the installs complete, run any notebook
 Navigate to "EC2" in the [AWS](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2):
 ```
 aws account: eric.cheng003c@gmail.com
-aws pw: LetsGoYankees**!
+aws pw: LetsGo*********!
 ```
 Under "Network & Security", click "Security Groups". Select it and click "Edit inbound rules" on the bottom to add new rule:
 ```
