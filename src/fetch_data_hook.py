@@ -6,11 +6,11 @@ import pandas as pd
 load_dotenv()
 
 BASE_DIR = '../SQL/'
-host = os.environ['host']
-database = os.environ['database']
-user = os.environ['user']
-password = os.environ['password']
-port = os.environ['port']
+host = os.environ['HOST']
+database = os.environ['DATABASE']
+user = os.environ['USER']
+password = os.environ['PASSWORD']
+port = os.environ['PORT']
 
 def fetch_sql_file(filename: str):
     try:

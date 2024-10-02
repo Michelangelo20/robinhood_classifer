@@ -30,11 +30,11 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 ### Getting Started:
 Add an .env file to the root if not there already:
 ```
-host="robinhood.cjomywuwikjl.us-east-2.rds.amazonaws.com"
-database="postgres"
-user="postgres"
-password="password"
-port="5432"
+HOST="robinhood.cjomywuwikjl.us-east-2.rds.amazonaws.com"
+DATABASE="postgres"
+USER="postgres"
+PASSWORD="password"
+PORT="5432"
 ```
 Check out this project repo, then run this command:
 ```
@@ -74,7 +74,7 @@ After the installs complete, run any notebook
 Navigate to "EC2" in the [AWS](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2):
 ```
 aws account: eric.cheng003c@gmail.com
-aws pw: LetsGo*********!
+aws pw: secret secret
 ```
 Under "Network & Security", click "Security Groups". Select it and click "Edit inbound rules" on the bottom to add new rule:
 ```
