@@ -40,7 +40,7 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 
 Consider data set 1 (ds1.csv). The data set comprises features (the Five xs) along with three sequences
 that may or may not be generated from the features (3 ys).
-* Note: Consider data set 1 (ds1.csv). The data set comprises features (the Five xs) along with three sequences
+Note: Consider data set 1 (ds1.csv). The data set comprises features (the Five xs) along with three sequences
 that may or may not be generated from the features (3 ys).
 * Q1. Describe the data set in a few sentences. E.g. What are the distributions of each feature?
 Summary statistics?
