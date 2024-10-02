@@ -1,11 +1,11 @@
-# Robinhood-OA-Classifer
-This code repository is for the Robinhood Data Science OA
+# Data Science & Engineering Portfolio
+This code repository is for the Data Science and Engineering OA's. This repository stores Robinhood, Klaviyo, and MLB projects.
 
-### Problem:
+### RH Problem:
 
 In order to improve user retention and lower churn, the growth team at Robinhood is interested in understanding why and which users withdraw money from their Robinhood account.  A user is considered churn when their equity value (amount of money in Robinhood account) falls below $10 for a period of 28 consecutive calendar days or longer.
 
-### Data:
+### RH Data:
 
 features_data.csv - contains user level data such as:
 * user_id - unique id for every user
@@ -20,7 +20,7 @@ features_data.csv - contains user level data such as:
 
 equity_value_data.csv - contains user_id and equity_value for user along with timestamps for days when the user's equity value is greater than or equal to $10.
 
-### Questions:
+### RH Questions:
 
 * Q1. What percentage of users have churned in the data provided?
 * Q2. Build a classifier that given a user with their features assigns a churn probability for each user and predicts which users will churn. Based on the classifier output classify each user in the dataset as churned or not churned. What's the AUC score of your test set?
