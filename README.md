@@ -27,6 +27,35 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 * Q3. What's the distribution of the given feature that has the highest correlation with churn (Right/left skewed, normal, multinomial distributions)
 * Q4. What are the top 3 features? List the most important features that correlate to user churn
 
+### Klaviyo Questions:
+
+* Q1. Assemble a dataframe with one row per customer and the following columns: customer_id, gender, most_recent_order_date, order_count (number of orders placed by this customer). Sort the dataframe by customer_id ascending and display the first 10 rows.
+* Q2. Plot the count of orders per week for the store.
+* Q3. Compute the mean order value for gender 0 and for gender 1. Do you think the difference is significant? Justify your choice of method.
+* Q4. Generate a confusion matrix for the gender predictions of customers in this dataset. You should assume that there is only one gender prediction for each customer. What does the confusion matrix tell you about the quality of the predictions?
+* Q5. Describe one of your favorite tools or techniques and give a small example of how it's helped you solve a problem. Limit your answer to one paragraph, and please be specific.
+* Note: For each question, state any considerations or assumptions you made.
+
+### MLB Questions:
+
+Consider data set 1 (ds1.csv). The data set comprises features (the Five xs) along with three sequences
+that may or may not be generated from the features (3 ys).
+* Note: Consider data set 1 (ds1.csv). The data set comprises features (the Five xs) along with three sequences
+that may or may not be generated from the features (3 ys).
+* Q1. Describe the data set in a few sentences. E.g. What are the distributions of each feature?
+Summary statistics?
+* Q2. Try to come up with a predictive model, e.g. y = f(x_1 , … , x_n) for each y sequence. Describe
+your models and how you came up with them. What (if any) are the predictive variables?
+How good would you say each of your models is?
+* Q3. Consider data set 2 (ds2.csv). The dataset comprises a set of observations that correspond to multiple
+groups. Describe the data in a few sentences. How would you visualize this data set? Can you identify the number of groups in the data and assign each row to its group? Can you create a good visualization of your groupings?
+[Stack Overflow](https://data.stackexchange.com/stackoverflow/query/new):
+* Q4. How many posts were created in 2017?
+* Q5. What post/question received the most answers?
+* Q6. For posts created in 2020, what were the top 10 tags?
+* Q7. For the questions created in 2017, what was the average time (in seconds) between
+
+
 ### Getting Started:
 Check out this project repo, then add an .env credentials, case-sensitive, to the root if not there already:
 ```
