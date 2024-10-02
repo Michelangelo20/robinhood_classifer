@@ -1,4 +1,4 @@
 select
 *
 from
-ds.features_data
+features_data

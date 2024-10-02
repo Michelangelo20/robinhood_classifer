@@ -1,8 +1,8 @@
 WITH all_dates AS (
     -- Step 1: Generate a complete calendar of dates
     SELECT generate_series(
-        (SELECT MIN(timestamp)::date FROM equity_value_data),
-        (SELECT MAX(timestamp)::date FROM equity_value_data),
+        (SELECT MIN(timestamp)::date FROM ds.equity_value_data),
+        (SELECT MAX(timestamp)::date FROM ds.equity_value_data),
         INTERVAL '1 day'
     )::date AS date
 ),
@@ -11,13 +11,13 @@ market_status AS (
     SELECT
         ad.date,
         CASE WHEN EXISTS (
-            SELECT 1 FROM equity_value_data e WHERE e.timestamp::date = ad.date
+            SELECT 1 FROM ds.equity_value_data e WHERE e.timestamp::date = ad.date
         ) THEN 'open' ELSE 'closed' END AS market_status
     FROM all_dates ad
 ),
 users AS (
     -- Get the list of all users
-    SELECT DISTINCT user_id FROM equity_value_data
+    SELECT DISTINCT user_id FROM ds.equity_value_data
 ),
 user_dates AS (
     -- Step 3: Create user-date combinations
@@ -33,7 +33,7 @@ user_equity AS (
         ud.market_status,
         e.close_equity
     FROM user_dates ud
-    LEFT JOIN equity_value_data e
+    LEFT JOIN ds.equity_value_data e
         ON ud.user_id = e.user_id AND ud.date = e.timestamp::date
 ),
 user_state AS (

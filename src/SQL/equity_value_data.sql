@@ -1,3 +1,4 @@
-SELECT *
+SELECT
+*
 FROM
-ds.equity_value_data
+equity_value_data

@@ -30,11 +30,14 @@ equity_value_data.csv - contains user_id and equity_value for user along with ti
 ### Getting Started:
 Add an .env file to the root if not there already:
 ```
-host="localhost"
-database="robinhood"
+host="robinhood.cjomywuwikjl.us-east-2.rds.amazonaws.com"
+database="postgres"
 user="postgres"
 password="password"
 port="5432"
+
+aws account: eric.cheng003c@gmail.com
+aws pw: LetsGoYankees**!
 ```
 Check out this project repo, then run this command:
 ```
@@ -70,26 +73,17 @@ featuretools - automated feature engineering library
 ```
 After the installs complete, run any notebook
 
-### Local PostgreSQL Database Setup:
-Configure and Install PostgreSQL and DBeaver
-* [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) - links to PostgreSQL database download
-* [DBeaver](https://dbeaver.io/) - links to SQL IDE
-Create and Populate PostgreSQL database in DBeaver
+### AWS RDS PostgreSQL Access Setup:
+Navigate to "EC2" in the AWS:
 ```
-host="localhost"
-database="robinhood"
-schema:"ds"
-user="postgres"
-password="password"
-port="5432"
+aws account: eric.cheng003c@gmail.com
+aws pw: LetsGoYankees**!
 ```
-Upload .csv files in data directory to DBeaver
+Under "Network & Security", click "Security Groups". Select it and click "Edit inbound rules" on the bottom to add new rule:
 ```
-database="robinhood"
-schema:"ds"
-tableName:"equity_value_data.csv"
-
-database="robinhood"
-schema:"ds"
-tableName:"features_data.csv"
+Type: PostgreSQL
+Protocol: TCP
+Port Range: 5432
+Source: Choose "My IP"
 ```
+Save Changes
