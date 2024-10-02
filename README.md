@@ -49,7 +49,7 @@ your models and how you came up with them. What (if any) are the predictive vari
 How good would you say each of your models is?
 * Q3. Consider data set 2 (ds2.csv). The dataset comprises a set of observations that correspond to multiple
 groups. Describe the data in a few sentences. How would you visualize this data set? Can you identify the number of groups in the data and assign each row to its group? Can you create a good visualization of your groupings?
-</br>
+<br>
 [Stack Overflow](https://data.stackexchange.com/stackoverflow/query/new):
 * Q4. How many posts were created in 2017?
 * Q5. What post/question received the most answers?
