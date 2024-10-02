@@ -3,11 +3,11 @@ WITH user_dates AS (
     SELECT
         u.user_id,
         d.date
-    FROM (SELECT DISTINCT user_id FROM ds.equity_value_data) u
+    FROM (SELECT DISTINCT user_id FROM ds.equity_valueequity_value_data) u
     CROSS JOIN (
         SELECT generate_series(
-            (SELECT MIN(timestamp)::date FROM ds.equity_value_data),
-            (SELECT MAX(timestamp)::date FROM ds.equity_value_data),
+            (SELECT MIN(timestamp)::date FROM ds.equity_valueequity_value_data),
+            (SELECT MAX(timestamp)::date FROM ds.equity_valueequity_value_data),
             INTERVAL '1 day'
         )::date AS date
     ) d
@@ -21,7 +21,7 @@ equity_filled AS (
             PARTITION BY ud.user_id ORDER BY ud.date
         )) AS close_equity
     FROM user_dates ud
-    LEFT JOIN ds.equity_value_data e
+    LEFT JOIN ds.equity_valueequity_value_data e
         ON ud.user_id = e.user_id AND ud.date = e.timestamp::date
 ),
 below_10_flag AS (
