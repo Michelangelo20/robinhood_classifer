@@ -86,4 +86,4 @@ Protocol: TCP
 Port Range: 5432
 Source: Choose "My IP"
 ```
-Save Changes
+Click Save Changes
