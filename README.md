@@ -35,9 +35,6 @@ database="postgres"
 user="postgres"
 password="password"
 port="5432"
-
-aws account: eric.cheng003c@gmail.com
-aws pw: LetsGoYankees**!
 ```
 Check out this project repo, then run this command:
 ```
