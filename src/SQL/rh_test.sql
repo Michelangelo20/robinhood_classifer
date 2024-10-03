@@ -91,4 +91,3 @@
 -- SELECT * FROM TEMP8
 -- -- -- Filtering for users  whose last time being aboved $10 happens to be your last consuective 10$streak??
 -- -- SELECT * FROM temp8 WHERE start_streak_date=last_above10_streak
-
