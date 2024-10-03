@@ -35,11 +35,11 @@ temp4 AS (
     FROM temp3
     WHERE duration_between_above10_streaks >= 28
 )
-SELECT
-    CONCAT(
-        ROUND(
-            (COUNT(DISTINCT user_id) * 1.0 / (SELECT COUNT(DISTINCT user_id) FROM equity_value_data)) * 100, 3
-        ), '%'
-    ) AS churn_rate
-FROM
-    temp4;
+select
+user_id,
+count(user_id)
+from
+temp4
+group by user_id
+having count(user_id) >=2
+
