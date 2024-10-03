@@ -38,7 +38,7 @@ temp4 AS (
 SELECT
     CONCAT(
         ROUND(
-            (COUNT(DISTINCT user_id) * 1.0 / (SELECT COUNT(DISTINCT user_id) FROM equity_value_data)) * 100, 3
+            (COUNT(DISTINCT user_id) * 1.0 / (SELECT COUNT(DISTINCT user_id) FROM features_data)) * 100, 3
         ), '%'
     ) AS churn_rate
 FROM
